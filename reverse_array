@@ -1,0 +1,18 @@
+import java.util.* ;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Integer[] arr = {-1, 0 , 6, 4 , 5, 9, 12};
+        Integer[] new_arr = arr;
+        //using for loop 
+        System.out.println("method 1");
+        for(int i = arr.length-1; i>= 0 ; i--){
+          System.out.print(arr[i]+" "); 
+        }
+
+        System.out.println("\n"+"method 2");
+        Collections.reverse(Arrays.asList(new_arr));
+        System.out.println(Arrays.toString(new_arr)); 
+        
+    }
+}
