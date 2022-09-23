@@ -1,0 +1,11 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        int[] arr = {7, 5, 2, 1, 9};
+        int[] new_arr = arr;//sorting in duplicate array
+        Arrays.sort(new_arr);
+        System.out.println("min: "+new_arr[0]+"  max: "+new_arr[new_arr.length-1]);
+
+    }
+}
