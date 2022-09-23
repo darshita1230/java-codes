@@ -1,0 +1,15 @@
+import java.util.* ;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        //to find kth smallest and largest element
+        int k = 3;
+        
+        int[] arr = {30, 60, 10, 20, 40, 50, 70, 80 , 90};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr)+"\n");
+        System.out.println("kth smallest element: "+arr[k-1]+"\n");
+        System.out.println("kth largest element: "+arr[arr.length - k]);
+        
+    }
+}
