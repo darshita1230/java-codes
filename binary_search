@@ -1,0 +1,36 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        int[] arr = {-1, 0 , 6, 4 , 5, 9, 12};
+        int[] new_arr = arr;
+        Arrays.sort(new_arr);
+        //printing array after sorted
+        System.out.println(Arrays.toString(new_arr));
+        //target
+        int target = 6;
+        
+        int left = 0;
+        int right = new_arr.length-1;
+        
+        
+        while(left <= right){
+            //calc the midpoint
+            int mid = left + (right - left) / 2;
+            if(new_arr[mid] == target){
+                //output the index of the target
+                System.out.println("index = "+mid);
+                break;
+                
+            }else if(new_arr[mid]>target){
+                //target less than mid
+                right = mid - 1;
+            }else{
+                //target greater than mid
+                left = mid + 1;
+            }
+            
+        }
+        
+    }
+}
