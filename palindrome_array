@@ -1,0 +1,38 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] arr = {111,222,333,444,555};
+        int[] arr1 = arr.clone();
+        int x = 341;
+        int y  = 0;
+        int rem;
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=0; i<arr.length ; i++){
+            while(arr[i]!=0){
+            
+            rem = arr[i] % 10;//x = 1
+            y = y * 10 + rem;//10
+            arr[i] = arr[i]/10;//
+            
+        }
+        list.add(y);
+        y = 0;
+            
+        }
+        
+        int count = 0;
+        for(int k = 0; k<arr1.length ; k++){
+            if(list.get(k) == arr1[k]){
+              count++;  
+            }
+            
+        }
+        if(count == arr.length){
+          System.out.println("It is a palindrome array");  
+        }else{
+          System.out.println("It is not a palindrome array");  
+        }
+
+    }
+}
