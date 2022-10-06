@@ -1,0 +1,28 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] arr = {56,72,23,18};
+        int x = 341;
+        int y  = 0;
+        int rem;
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        
+        for(int i=0; i<arr.length ; i++){
+            while(arr[i]!=0){
+            rem = arr[i] % 10;//x = 1
+            y = y * 10 + rem;//10
+            arr[i] = arr[i]/10;//
+            
+        }
+        list.add(y);
+        y = 0;
+            
+        }
+        
+        //printing rev num list
+        System.out.println(list);
+  
+    }
+}
